@@ -3,15 +3,14 @@ GET http://localhost:3003/api/blogs HTTP/1.1
 ###
 //Adding blog
 POST http://localhost:3003/api/blogs HTTP/1.1
-content-Type: application/json
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoMjM0NSIsImlkIjoiNjFmOGMzOWRkMGNlZjczM2RjMjg3YjRkIiwiaWF0IjoxNjQzNjkzNDAwfQ.e_A1cD11OER0T3GifzTcNy2C-g3hImZwMmmCUrR0LRI
 
 {
-    "author": "The Whoat Not",
-    "title": "No one",
-    "url": "http://www.nononoe.com",
-    "likes": 2,
-    "userId": "61f8bca7dc622d49d49c0f13"
-    
+    "author": "Shane Rodrigues",
+    "title": "Authorised Token post",
+    "url": "http://www.yesthisworks.com",
+    "likes": 10000
 }
 
 ###
@@ -43,6 +42,16 @@ Content-Type: application/json
     "blogs": [],
     "username": "sh2345",
     "name": "Shane Rodrigues",
+    "password": "shane2010r"
+}
+
+###
+//logging in as user
+POST http://localhost:3003/api/login
+content-Type: application/json
+
+{
+    "username": "sh2345",
     "password": "shane2010r"
 }
 
