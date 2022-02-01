@@ -4,7 +4,7 @@ GET http://localhost:3003/api/blogs HTTP/1.1
 //Adding blog
 POST http://localhost:3003/api/blogs HTTP/1.1
 content-Type: application/json
-Authorization: 
+# Authorization: 
 
 {
     "author": "Shane Rodrigues",
@@ -52,8 +52,8 @@ POST http://localhost:3003/api/login
 content-Type: application/json
 
 {
-    "username": "root",
-    "password": "sekret"
+    "username": "duhmnb",
+    "password": "passtheword"
 }
 
 ###
