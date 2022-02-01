@@ -4,7 +4,7 @@ GET http://localhost:3003/api/blogs HTTP/1.1
 //Adding blog
 POST http://localhost:3003/api/blogs HTTP/1.1
 content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoMjM0NSIsImlkIjoiNjFmOGMzOWRkMGNlZjczM2RjMjg3YjRkIiwiaWF0IjoxNjQzNjk4Nzc5LCJleHAiOjE2NDM3MDIzNzl9.NFulPCE_b6zo5Q_XT-jM18Pyw18HHTVNY9ttti2u76w
+Authorization: 
 
 {
     "author": "Shane Rodrigues",
@@ -15,9 +15,9 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoM
 
 ###
 //deleting blog
-DELETE http://localhost:3003/api/blogs/61f8d7f26ba17f10b0438117 HTTP/1.1
+DELETE http://localhost:3003/api/blogs/61f8d710d6860029d873bea4 HTTP/1.1
 content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZjhjYjFmYjMwOWU5NGIxYzM3MmZlMyIsImlhdCI6MTY0MzY5ODY0MCwiZXhwIjoxNjQzNzAyMjQwfQ.VYPn6k3gOlBzu2si8QVvyYqJkHP3x4GJCJ-q4UnISbI
+Authorization: 
 
 
 ###
@@ -52,8 +52,8 @@ POST http://localhost:3003/api/login
 content-Type: application/json
 
 {
-    "username": "sh2345",
-    "password": "shane2010r"
+    "username": "root",
+    "password": "sekret"
 }
 
 ###
