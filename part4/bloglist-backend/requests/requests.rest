@@ -1,32 +1,52 @@
 GET http://localhost:3003/api/blogs HTTP/1.1
 
 ###
-
+//Adding blog
 POST http://localhost:3003/api/blogs HTTP/1.1
 content-Type: application/json
 
 {
-    "author": "Jean Paul",
-    "title": "Life of X",
-    "url": "xqClOL.com",
-    "likes": 199
+    "author": "The Whoat Not",
+    "title": "No one",
+    "url": "http://www.nononoe.com",
+    "likes": 2,
+    "userId": "61f8bca7dc622d49d49c0f13"
+    
 }
+
+###
+//deleting blog
+DELETE http://localhost:3003/api/blogs/61f8bd4cdc622d49d49c0f16 HTTP/1.1
+content-Type: application/json
+
 
 ###
 // Creating a user
 POST http://localhost:3003/api/users HTTP/1.1
 Content-Type: application/json
 
-{
-    "blogs": [],
-    "username": "mluukai",
-    "name": "Matti Luukkainen",
-    "password": "pword"
-}
+# {
+#     "blogs": [],
+#     "username": "mluukai",
+#     "name": "Matti Luukkainen",
+#     "password": "pword"
+# }
 
 # {
 #     "blogs": [],
-#     "username": "sh2345",
-#     "name": "Shane Rodrigues",
-#     "password": "shane2010r"
+#     "username": "root",
+#     "name": "Super User",
+#     "password": "sekret"
 # }
+
+{
+    "blogs": [],
+    "username": "sh2345",
+    "name": "Shane Rodrigues",
+    "password": "shane2010r"
+}
+
+###
+//deleting user
+DELETE http://localhost:3003/api/users/61f8bca7dc622d49d49c0f13 HTTP/1.1
+content-Type: application/json
