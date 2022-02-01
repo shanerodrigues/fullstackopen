@@ -3,14 +3,14 @@ GET http://localhost:3003/api/blogs HTTP/1.1
 ###
 //Adding blog
 POST http://localhost:3003/api/blogs HTTP/1.1
-Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoMjM0NSIsImlkIjoiNjFmOGMzOWRkMGNlZjczM2RjMjg3YjRkIiwiaWF0IjoxNjQzNjkzNDAwfQ.e_A1cD11OER0T3GifzTcNy2C-g3hImZwMmmCUrR0LRI
+content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYxZjhjYjFmYjMwOWU5NGIxYzM3MmZlMyIsImlhdCI6MTY0MzY5NDkwOSwiZXhwIjoxNjQzNjk4NTA5fQ.7sokxttKyHtdbUHOAYNr1QhjFHIwVuO1qCrsRvVgT6g
 
 {
-    "author": "Shane Rodrigues",
-    "title": "Authorised Token post",
-    "url": "http://www.yesthisworks.com",
-    "likes": 10000
+    "author": "Root",
+    "title": "Super powers of a super user",
+    "url": "http://www.superuserye.com",
+    "likes": 100
 }
 
 ###
@@ -51,8 +51,8 @@ POST http://localhost:3003/api/login
 content-Type: application/json
 
 {
-    "username": "sh2345",
-    "password": "shane2010r"
+    "username": "root",
+    "password": "sekret"
 }
 
 ###
