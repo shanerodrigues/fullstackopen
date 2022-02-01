@@ -37,15 +37,7 @@ blogsRouter.post("/", async (request, response) => {
   console.log("completed after blog id added")
 
   await user.save()
-  // user
-  //   .save()
-  //   .then(console.log("DONE"))
-  //   .catch((e) => {
-  //     console.log(e)
-  //   })
-
-  // response.status(201).json(savedBlog.toJSON())
-  response.status(201).json(savedBlog)
+  response.status(201).json(savedBlog.toJSON())
 })
 
 blogsRouter.delete("/:id", async (request, response) => {
