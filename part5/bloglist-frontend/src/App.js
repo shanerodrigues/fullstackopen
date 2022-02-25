@@ -108,6 +108,7 @@ const App = () => {
     const LogoutForm = () => (
       <form
         onSubmit={() => window.localStorage.removeItem("loggedBlogappUser")}
+        style={{ display: "inline-block" }}
       >
         <button type="submit">logout</button>
       </form>
