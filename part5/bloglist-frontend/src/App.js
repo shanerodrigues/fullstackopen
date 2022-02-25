@@ -50,6 +50,23 @@ const App = () => {
     }
   }
 
+  const updateBlog = (id, blogObject) => {
+    // only send user.id not entire user object to update the database
+    const object = {
+      ...blogObject,
+      user: blogObject.user?.id,
+    }
+    blogService
+      .update(id, object)
+      .then(() => {
+        // use the blogObject as that is updated and contains all user data
+        setBlogs(
+          blogs.map((blog) => (blog.id === blogObject.id ? blogObject : blog))
+        )
+      })
+      .catch((error) => console.log(error))
+  }
+
   const addBlog = (blogObject) => {
     try {
       blogService.create(blogObject).then((returnedBlog) => {
@@ -137,7 +154,7 @@ const App = () => {
 
       {user !== null && newBlog()}
       {blogs.map((blog) => (
-        <Blog key={blog.id} blog={blog} />
+        <Blog key={blog.id} blog={blog} updateLikes={updateBlog} />
       ))}
     </div>
   )

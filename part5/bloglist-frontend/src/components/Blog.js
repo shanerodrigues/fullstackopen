@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Togglable from "./Togglable"
-const Blog = ({ blog }) => {
+import blogService from "../services/blogs"
+
+const Blog = ({ blog, updateLikes }) => {
   const [blogVisible, setBlogVisible] = useState(false)
   const hideWhenVisible = { display: blogVisible ? "none" : "inline-block" }
   const showWhenVisible = { display: blogVisible ? "inline-block" : "none" }
@@ -10,6 +12,15 @@ const Blog = ({ blog }) => {
     border: "solid",
     borderWidth: 1,
     marginBottom: 5,
+  }
+
+  const handleClick = (blog) => {
+    const blogObject = {
+      ...blog,
+      likes: blog.likes + 1,
+    }
+
+    updateLikes(blog.id, blogObject)
   }
 
   return (
@@ -27,7 +38,7 @@ const Blog = ({ blog }) => {
       <div style={showWhenVisible}>
         <p>{blog.url}</p>
         <p>
-          {blog.likes} <button>like</button>
+          {blog.likes} <button onClick={() => handleClick(blog)}>like</button>
         </p>
         {blog.user && <p>{blog.user.name}</p>}
       </div>
